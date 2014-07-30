@@ -1,1 +1,26 @@
-exclude: [README.md]
+exclude: ['README.md']
+markdown: rdiscount
+
+# tThe format of the post name
+permalink: /:year-:month-:day/:title.html
+
+# Theme settings
+theme:
+ 
+  # Site name
+  site_name: jingfan
+ 
+  # Google analytics UID
+  google_analytics_uid: UA-53384315-1
+ 
+  # Disqus shortname, for comments
+  disqus_shortname: jingfan
+ 
+  # Number of featured posts on homepage
+  homepage_featured: 1
+ 
+  # Number of posts on homepage (in addition to featured posts)
+  homepage_posts: 3
+ 
+  # Number of words to display in post summaries
+  featured_wordcount: 40
