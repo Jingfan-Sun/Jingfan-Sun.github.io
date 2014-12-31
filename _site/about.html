@@ -1,7 +1,6 @@
 <!DOCTYPE html>
-<!-- ref https://github.com/stephan83/stephan83.github.com/blob/master/_layouts/default.html -->
 <html>
-	<head>
+		<head>
 		<meta charset="UTF-8" />
 		<title>About me | jingfan</title>
 		<link rel='stylesheet'  href='/css/style.css' type='text/css' media='all' />
@@ -9,30 +8,50 @@
 		<!--[if lt IE 9]>
 		<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
-		<script>
-		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+		<script type="text/javascript">
 
-		  ga('create', 'UA-53384315-1', 'auto');
-		  ga('send', 'pageview');
+		  var _gaq = _gaq || [];
+		  _gaq.push(['_setAccount', 'UA-53384315-1']);
+		  _gaq.push(['_trackPageview']);
+
+		  (function() {
+		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		  })();
 
 		</script>
+		<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-53384315-1', 'jingfan.me');
+  ga('send', 'pageview');
+  ga(‘set’, ‘&uid’, 53384315); // 使用已登录的 user_id 来设置用户 ID。
+
+</script>
 	</head>
+
 	<body>
 		<header>
 			<div>
 				<nav>
 					<ul>
-						<li><a href="/archive.html" title="Archive">Archive</a></li>
-						<li><a href="/about.html" title="About me">About me</a></li>
+						<li><a href="/archive.html" title="Archive">Projects</a></li>
+						<li><a href="/about.html" title="About me">Photos</a></li>
+						<li><a href="/about.html" title="About me">About</a></li>
+						<li><a href="/about.html" title="About me">Contact</a></li>
 					</ul>
 				</nav>
+				
 				<p id="logo"><a href="/" title="jingfan">jingfan</a></p>
 			</div>
+			
 		</header>
-
+		<!--<div class="language"><img src="/public/icon_demo.png"></div>-->
+		<!--<div class="language"><a>S</a></div>-->
 		<div id="content">
 		<div class="page" id="about">
 
@@ -65,11 +84,10 @@
 </div>
 		</div>
 
-		<footer>
+		<!--<footer>
 			<p>Jekyll theme by <a href="http://stephan83.github.com">Stephan Florquin</a></p>
-		</footer>
+		</footer>-->
 
-<!--	This is used to show the text "Fork mw on GitHub" on the top-left of the website 
-		<div><a href="https://github.com/stephan83/stephan83.github.com"><img style="position: fixed; top: 0; left: 0; border: 0; z-index: 32001;" src="https://s3.amazonaws.com/github/ribbons/forkme_left_red_aa0000.png" alt="Fork me on GitHub"></a></div> -->
+		<!--<div><a href="https://github.com/stephan83/stephan83.github.com"><img style="position: fixed; top: 0; left: 0; border: 0; z-index: 32001;" src="https://s3.amazonaws.com/github/ribbons/forkme_left_red_aa0000.png" alt="Fork me on GitHub"></a></div>-->
 	</body>
 </html>

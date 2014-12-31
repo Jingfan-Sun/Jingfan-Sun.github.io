@@ -1,38 +1,32 @@
 <!DOCTYPE html>
-<!-- ref https://github.com/stephan83/stephan83.github.com/blob/master/_layouts/default.html -->
 <html>
-	<head>
-		<meta charset="UTF-8" />
-		<title>{{ page.title }} | {{ site.theme.site_name }}</title>
-		<link rel='stylesheet'  href='/css/style.css' type='text/css' media='all' />
-		<link href='http://fonts.googleapis.com/css?family=Poly:400,400italic' rel='stylesheet' type='text/css'>
-		<!--[if lt IE 9]>
-		<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-		<!{[endif]-->
-		{% include Google_Analytics.html %}
-	</head>
+	{% include head.html %}
 	<body>
 		<header>
 			<div>
 				<nav>
 					<ul>
-						<li><a href="/archive.html" title="Archive">Archive</a></li>
-						<li><a href="/about.html" title="About me">About me</a></li>
+						<li><a href="/archive.html" title="Archive">Projects</a></li>
+						<li><a href="/about.html" title="About me">Photos</a></li>
+						<li><a href="/about.html" title="About me">About</a></li>
+						<li><a href="/about.html" title="About me">Contact</a></li>
 					</ul>
 				</nav>
+				
 				<p id="logo"><a href="/" title="{{ site.theme.site_name }}">{{ site.theme.site_name }}</a></p>
 			</div>
+			
 		</header>
-
+		<!--<div class="language"><img src="/public/icon_demo.png"></div>-->
+		<!--<div class="language"><a>S</a></div>-->
 		<div id="content">
 		{{ content }}
 		</div>
 
-		<footer>
+		<!--<footer>
 			<p>Jekyll theme by <a href="http://stephan83.github.com">Stephan Florquin</a></p>
-		</footer>
+		</footer>-->
 
-<!--	This is used to show the text "Fork mw on GitHub" on the top-left of the website 
-		<div><a href="https://github.com/stephan83/stephan83.github.com"><img style="position: fixed; top: 0; left: 0; border: 0; z-index: 32001;" src="https://s3.amazonaws.com/github/ribbons/forkme_left_red_aa0000.png" alt="Fork me on GitHub"></a></div> -->
+		<!--<div><a href="https://github.com/stephan83/stephan83.github.com"><img style="position: fixed; top: 0; left: 0; border: 0; z-index: 32001;" src="https://s3.amazonaws.com/github/ribbons/forkme_left_red_aa0000.png" alt="Fork me on GitHub"></a></div>-->
 	</body>
 </html>

@@ -29,7 +29,7 @@ time, mark, audio, video {
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
-  display: block;
+  display: block; /*此元素将显示为块级元素，此元素前后会带有换行符。*/
 }
 body {
 line-height: 1;
@@ -125,7 +125,7 @@ header {
 }
 
 header div {
-  width: 560px;
+  width: 670px;
   margin: 0 auto;
 }
 
@@ -134,6 +134,26 @@ header div {
   padding: .2em 0 .4em;
   display: block;
   float: left;
+}
+
+.language {
+	display: block;
+	color: white;
+	position: absolute;
+	top: 0;
+	height: auto;
+	/*background: black;
+	border-radius: 50px;*/
+	z-index: 32001;
+	opacity: 0.3;
+	transition: all 1s ease-in-out;
+	-webkit-transition: all 1s ease-in-out;
+}
+
+.language:hover {
+	opacity: 1;
+	transform: rotate(180deg);
+	-webkit-transform: rotate(180deg);
 }
 
 header a {
@@ -163,21 +183,21 @@ header nav a:hover {
 -------------------------------------------------------------- */
 
 footer  {
-  width: 560px;
+  width: 670px;
   margin: 0 auto;
   font-size: .8em;
   font-style: italic;
   color: #666;
   text-align: center;
   padding: .3em 0;
-  clear: both;
+  clear: both; /*参见http://www.w3cplus.com/css3/learning-to-use-the-before-and-after-pseudo-elements-in-css.html*/
 }
 
 /* =Content
 -------------------------------------------------------------- */
 
 #content {
-  width: 560px;
+  width: 670px; /*改变正文宽度*/
   padding: 0 40px;
   margin: 5em auto 3em;
   text-align: justify;
@@ -224,7 +244,7 @@ footer  {
 
 #posts {
   margin-bottom: 1.5em;
-  line-height: 1.2em;
+  line-height: 1.2em; /*设置行高*/
 }
 
 #posts dd {
@@ -236,8 +256,9 @@ footer  {
 -------------------------------------------------------------- */
 
 #home {
-  text-align: left;
-  background: url(/imgs/gears.png) no-repeat 0 20px;
+  text-align: left; /*左对齐*/
+  background: url(/imgs/IMG_0269.png) no-repeat 20% 20%;
+  background-size: 33% 80%;
 }
 
 #home #posts {

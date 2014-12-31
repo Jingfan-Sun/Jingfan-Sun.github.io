@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+		<head>
+		<meta charset="UTF-8" />
+		<title>Why should you use a non-relational database? | jingfan</title>
+		<link rel='stylesheet'  href='/css/style.css' type='text/css' media='all' />
+		<link href='http://fonts.googleapis.com/css?family=Poly:400,400italic' rel='stylesheet' type='text/css'>
+		<!--[if lt IE 9]>
+		<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		<script type="text/javascript">
+
+		  var _gaq = _gaq || [];
+		  _gaq.push(['_setAccount', 'UA-53384315-1']);
+		  _gaq.push(['_trackPageview']);
+
+		  (function() {
+		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		  })();
+
+		</script>
+		<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-53384315-1', 'jingfan.me');
+  ga('send', 'pageview');
+  ga(‘set’, ‘&uid’, 53384315); // 使用已登录的 user_id 来设置用户 ID。
+
+</script>
+	</head>
+
+	<body>
+		<header>
+			<div>
+				<nav>
+					<ul>
+						<li><a href="/archive.html" title="Archive">Projects</a></li>
+						<li><a href="/about.html" title="About me">Photos</a></li>
+						<li><a href="/about.html" title="About me">About</a></li>
+						<li><a href="/about.html" title="About me">Contact</a></li>
+					</ul>
+				</nav>
+				
+				<p id="logo"><a href="/" title="jingfan">jingfan</a></p>
+			</div>
+			
+		</header>
+		<!--<div class="language"><img src="/public/icon_demo.png"></div>-->
+		<!--<div class="language"><a>S</a></div>-->
+		<div id="content">
+		<div id="post">
+<h2>14 Dec 2010</h2>
+<h1>Why should you use a non-relational database?</h1>
+<p class="baseline">I wrote this a while ago, I'm not sure if I still totally agree with everything I said.</p>
+
+<p>Sometimes I hear people asking about what non-relational databases are and examples of what they can be used for. A common answer is that relational databases are not flexible enough / difficult to work with in some cases. I believe that non-relational databases are becoming increasingly popular not (only) because they offer more flexible ways to store data, but mostly because they can provide a performance boost.</p>
+
+<p>Let’s start with what’s wrong with relational databases from a scaling point of  view. It is difficult to split them accross multiple servers. Most of the time the ‘relational’ part only works on rows within the same database, hence the same server. So when a single server isn’t enough, typically ‘sharding’ is used. Sharding means that an algorithm is used to decide in which database a row (in the case of a relational database) should be stored depending on its ID for example. There are multiples algorithms to do this. A basic, non-practical one, would be to store a row in database A if its ID is even, otherwise in database B. This is a simplistic algorithm that is only good for explaining the concept of sharding. There are better ways to do this such as consistent hashing, and in many cases you can exploit the nature of your data to shard it efficiently. So far so good, but as you can imagine, if rows are stored in multiple databases, relational operations become more complicated/inefficient. Turns out in many cases you can simply do without them. Sometimes it involves a bit of redundancy in your data, but still you can live without them.</p>
+
+<p>I believe relational databases are great and very useful in concept, but if you’re not going to use the ‘relational’ part for scaling purposes, then why would you use one? Well one reason would be that the relational databases have been around for a long time and are known to be reliable. But I think the recent hype for non-relational databases happened because people realized they had to do without relations in order for their applications to scale well, as opposed to the new features they provide. In fact this is old news. Google stores everything in a non relational way accross multiple servers. But since people started using Rails and other frameworks that make it so easy to use relational databases, it seems collective consciousness sort of forgot about non-relational databases for a while. But now the topic of scaling and performance seems to be back in place.</p>
+
+<p>When you leave the world of relational databases, you get different options. There is more than one approach to non-relational databases. Some such as MongoDB or CouchDB are so called ‘document oriented’, which really means storing data in some sort of JSON-like tree form. Some people really like this, but I haven’t come across a case where I found it very useful yet. The other approach, the one I prefer, is the key-value storage. You specify a key, a value of some kind, and that’s almost about it. My personal favorite is Redis, which has some useful value types and operations. Since the key-value storage is so elementary, it is really easy to shard data, hence it scales very well across multiple servers (though Redis has a few ‘relational’ operations such as unions and inters which can’t be sharded). It is fast, simple, and your code deals with structuring data.</p>
+
+
+
+	<div id="posts">
+		<h3>See also...</h3>
+
+		
+			<dt>08 Apr 2012</dt>
+<dd><a href="/2012-04-08/client-side-templates.html">Client side templates</a></dd>
+		
+			<dt>08 Dec 2011</dt>
+<dd><a href="/2011-12-08/redis-benchmark-on-linode.html">Redis benchmark on Linode</a></dd>
+		
+			<dt>07 Dec 2011</dt>
+<dd><a href="/2011-12-07/use-this-theme-on-github.html">Use this theme on github</a></dd>
+		
+			<dt>06 Dec 2011</dt>
+<dd><a href="/2011-12-06/jekyll-github.html">Jekyll on github</a></dd>
+		
+	</div>
+
+
+
+</div>
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'jingfan';
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+		</div>
+
+		<!--<footer>
+			<p>Jekyll theme by <a href="http://stephan83.github.com">Stephan Florquin</a></p>
+		</footer>-->
+
+		<!--<div><a href="https://github.com/stephan83/stephan83.github.com"><img style="position: fixed; top: 0; left: 0; border: 0; z-index: 32001;" src="https://s3.amazonaws.com/github/ribbons/forkme_left_red_aa0000.png" alt="Fork me on GitHub"></a></div>-->
+	</body>
+</html>
