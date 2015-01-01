@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Client side templates
-baseline: Client side templates with browserify.
-tags: [coffee-script, template, browserify, node.js, eco]
+title: Analysis of Distributed Induction Motor Cascading Stall
+time: May 2014 -- Present
+baseline: Team Leader, National Innovation Training Program (NITP)
 ---
 
 I was looking for a simple way to use my templates client side. My current stack consists of:

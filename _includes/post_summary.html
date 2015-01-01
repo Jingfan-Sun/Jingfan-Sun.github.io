@@ -1,2 +1,4 @@
-<dt>{{ post.date | date_to_string }}</dt>
-<dd><a href="{{ post.url }}">{{ post.title }}</a></dd>
+<dt>{{ post.time }}</dt>
+<h4><a href="{{ post.url }}">{{ post.title }}</a></h4>
+<div class="baseline">{{ post.baseline }}</div>
+<div class="brief">{{ post.content | strip_html | truncatewords: site.theme.featured_wordcount }} <a href="{{ post.url }}" class="more">Read more »</a></div>

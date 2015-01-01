@@ -1,7 +1,8 @@
 ---
 layout: post
-title: Jekyll on github
-baseline: A few hours, a text editor, and a github account.
+title: Paralleling Control Technique of Micro-grid Inverters based on PQ Droop Method
+time: December 2013 -- September 2014
+baseline: Student Research Training Program (SRTP)
 tags: [github, jekyll]
 ---
 

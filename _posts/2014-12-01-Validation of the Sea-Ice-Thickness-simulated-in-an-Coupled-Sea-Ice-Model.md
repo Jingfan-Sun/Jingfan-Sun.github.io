@@ -1,7 +1,8 @@
 ---
 layout: post
-title: Redis benchmark on Linode
-baseline: How does redis perform on Linode?
+title: Validation of the Sea-Ice Thickness simulated in an Coupled Ocean-Sea Ice Model
+time: July -- October 2014
+baseline: University of Alberta Summer Intership Program
 tags: [databases]
 ---
 

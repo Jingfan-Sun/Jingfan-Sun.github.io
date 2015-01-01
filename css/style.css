@@ -93,6 +93,12 @@ h3 {
   color: #b00;
 }
 
+h4 {
+  font-size: 1.3em;
+  margin: .2em 0 .2em;
+  color: #b00;
+}
+
 a {
   text-decoration: none;
   color: #b00;
@@ -223,8 +229,16 @@ footer  {
 }
 
 .baseline {
-  font-size: 1.2em;
+  font-size: 0.9em;
   font-style: italic;
+  margin: .2em auto .2em;
+  color: #222;
+}
+
+.brief {
+margin-top: .3em;
+  margin-bottom: 3em;
+  padding: 0px;
   color: #222;
 }
 
@@ -257,8 +271,6 @@ footer  {
 
 #home {
   text-align: left; /*左对齐*/
-  background: url(/imgs/IMG_0269.png) no-repeat 20% 20%;
-  background-size: 33% 80%;
 }
 
 #home #posts {
@@ -267,8 +279,9 @@ footer  {
 }
 
 #home #intro {
-  width: 240px;
-  float: right;
+  width: 670px;
+  float: inherit;
+  text-align: center; /*左对齐*/
   margin-bottom: 1.4em;
 }
 

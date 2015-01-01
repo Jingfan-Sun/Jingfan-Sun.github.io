@@ -1,11 +1,14 @@
 ---
 layout: post
-title: Why should you use a non-relational database?
+title: Object Recognition and Vocal Communication Android App for robotics
+time: October 2012 -- May 2013
 baseline: I wrote this a while ago, I'm not sure if I still totally agree with everything I said.
 tags: [databases]
 ---
 
-Sometimes I hear people asking about what non-relational databases are and examples of what they can be used for. A common answer is that relational databases are not flexible enough / difficult to work with in some cases. I believe that non-relational databases are becoming increasingly popular not (only) because they offer more flexible ways to store data, but mostly because they can provide a performance boost.
+Sometimes![Title](/imgs/icon_demo.png "Title") I hear people asking about what non-relational databases are and examples of what they can be used for. A common answer is that relational databases are not flexible enough / difficult to work with in some cases. I believe that non-relational databases are becoming increasingly popular not (only) because they offer more flexible ways to store data, but mostly because they can provide a performance boost.
+
+![Title](/imgs/icon_demo.png "Title")
 
 Let’s start with what’s wrong with relational databases from a scaling point of  view. It is difficult to split them accross multiple servers. Most of the time the ‘relational’ part only works on rows within the same database, hence the same server. So when a single server isn’t enough, typically ‘sharding’ is used. Sharding means that an algorithm is used to decide in which database a row (in the case of a relational database) should be stored depending on its ID for example. There are multiples algorithms to do this. A basic, non-practical one, would be to store a row in database A if its ID is even, otherwise in database B. This is a simplistic algorithm that is only good for explaining the concept of sharding. There are better ways to do this such as consistent hashing, and in many cases you can exploit the nature of your data to shard it efficiently. So far so good, but as you can imagine, if rows are stored in multiple databases, relational operations become more complicated/inefficient. Turns out in many cases you can simply do without them. Sometimes it involves a bit of redundancy in your data, but still you can live without them.
 
