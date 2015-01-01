@@ -75,6 +75,7 @@ body {
 
 h1 {
   font-size: 2.4em;
+  float: left;
   text-decoration: none;
   color: #b00;
   line-height: 1.2em;
