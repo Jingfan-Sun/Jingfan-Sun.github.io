@@ -1,0 +1,4 @@
+I":<h4 id="abstract">Abstract</h4>
+
+<p>There is increasing interest in alternate arm converter (AAC) due to the fault-tolerant characteristics it could offer in high-voltage direct current (HVdc) systems. The simulation of AACs is important to assist with the design of hardware, control systems, and planning of power system expansions. However, simulation of AAC-HVdc using existing software takes a long time due to the presence of a large number of states and non-linear devices. An ultra-fast single-or multi-CPU simulation algorithm to simulate the AAC-HVdc system based on state-space models and using hybrid discretization algorithm with a relaxation technique that reduces the imposed computational burden is presented in this paper. The developed algorithm is validated with respect to reference PSCAD/EMTDC model.</p>
+:ET

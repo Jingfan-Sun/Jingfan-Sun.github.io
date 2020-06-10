@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% include head.html %}
+
+<body>
+	{% include navbar.html %}
+
+	<div class="jumbotron jumbotron-fluid">
+		<div class="container text-center">
+			<h3>{{ page.title }}</h3>
+			<a class="lead">{{ page.author }}</a>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-8 col-md-10 mx-auto text-justify">
+
+				{{ content }}
+
+			</div>
+		</div>
+	</div>
+
+	{% include foot.html %}
+	</body>
+
+</html>

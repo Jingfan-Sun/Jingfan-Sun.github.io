@@ -17,19 +17,19 @@
 	src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
 </script>
 
-<title>Jingfan Sun | Georgia Tech</title>
+<title>Real-time Electromagnetic Transient Simulation of Multi-Terminal HVDC-AC Grids based on GPU</title>
 
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 	<a class="navbar-brand" href="index.html">Jingfan Sun</a>
 	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
 		<span class="navbar-toggler-icon"></span>
 	</button>
 	<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
 		<div class="navbar-nav">
-			<a class="nav-item nav-link active" href="index.html">About <span class="sr-only">(current)</span></a>
+			<a class="nav-item nav-link " href="index.html">About <span class="sr-only">(current)</span></a>
 			<a class="nav-item nav-link " href="publications.html">Publications</a>
 			<!-- <a class="nav-item nav-link" href="#">Pricing</a> -->
 			<!-- <a class="nav-item nav-link disabled" href="#">Disabled</a> -->
@@ -38,21 +38,21 @@
 </nav>
 
 	<div class="jumbotron jumbotron-fluid">
-	<div class="container text-center">
-		<h1 class="display-4">About me</h1>
-		<p class="lead">Email: jingfan at gatech.edu</p>
+		<div class="container text-center">
+			<h3>Real-time Electromagnetic Transient Simulation of Multi-Terminal HVDC-AC Grids based on GPU</h3>
+			<a class="lead"><b>J. Sun</b>, S. Debnath, M. Saeedifard, and P. R V Marthi</a>
+		</div>
 	</div>
-</div>
 
-<div class="container">
-	<div class="row">
-		<div class="col-lg-8 col-md-10 mx-auto">
-			<h3 id="biography">Biography</h3>
-			<p class="lead">I am a fifth-year Ph.D. student at School of Electrical and Computer Engineering, Georgia Institute of Technology, advised by Prof. Maryam Saeedifard. We are investigating novel methodologies of modelling, protection, and high-performance simulation for large-scale cyber-physical systems.</p>
-			<p class="lead">Before moving to Georgia Tech, I obtained my B.E. degree with Honors in Electrical and Computer Engineering from Zhejiang University in 2015. I spent my summers in Amazon Web Services, Oak Ridge National Laboratory and Facebook, working on machine learning modelling, GPU-accelerated simulation, and search/information retrieval, respectively.</p>
-				<!-- <p></p>
-				<h3 id="research_interests">Research Interests</h3>
-				<p class="lead">I am broadly interested in power system, high-performance computing and artificial intelligence. Within power system, my subdisciplinary interests lie in simualtion, protection, and optimization for large-scale cyber-physical infrastructure systems, such as multi-terminal high-voltage direct-current (HVDC) grids, with emphasis on their robustness, reliability and security.</p> -->
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-8 col-md-10 mx-auto text-justify">
+
+				<h4 id="abstract">Abstract</h4>
+
+<p>High-fidelity electromagnetic transient (EMT) simulation plays a critical role in understanding the dynamic behavior and fast transients involved in operation, control, and protection of Multi-Terminal dc (MTdc) grids. This paper proposes a cost-effective high-performance real-time EMT simulation platform for large-scale cross-continental MTdc grids based on graphics processing unit (GPU). Fast dynamic transients from both ac and dc networks are captured in real time with 5 us time step, using advanced hybrid-discretized modular multilevel converter (MMC) model, frequency-dependent transmission line model, and EMT-type model of synchronous generators. The proposed simulation platform: i) assembles detailed EMT models of all components within an MTdc-ac grid into a single platform. This setup provides a complete simulation solution to capture fast transient signals required for high-bandwidth controller design and protection studies without any compromise; ii) implements the first GPU-based simulation architecture and corresponding algorithms for MTdc-ac grids with real-time performance at scales of 1 s; iii) is highly-efficient and balances the high utilization of GPU resources and low latency required for the simulation; and iv) outperforms the existing central processing unit (CPU)- or digital signal processor (DSP)/field-programmable gate array (FPGA)-based simulators in terms of its higher scalability on large-scale MTdc-ac grids and superior price-performance ratio on the hardware. Accuracy and performance of the proposed platform are evaluated with respect to the reference results from PSCAD/EMTDC environment.</p>
+
+
 			</div>
 		</div>
 	</div>
@@ -71,6 +71,6 @@
 
 	gtag('config', 'UA-128133404-1');
 </script>
-</body>
+	</body>
 
 </html>
