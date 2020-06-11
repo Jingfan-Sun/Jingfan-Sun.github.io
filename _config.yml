@@ -1,8 +1,9 @@
 exclude: [Gemfile", "Gemfile.lock"]
 markdown: kramdown
 kramdown:
+  input: GFM
   syntax_highlighter: rouge
 
 url: "http://ambaboo.github.io" # the base hostname & protocol for your site
-# Gems
-gems: [jekyll-sitemap, rouge]
+plugins:
+  - jekyll-sitemap
