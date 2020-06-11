@@ -2,6 +2,7 @@
 layout: default
 title: Jingfan Sun | Publications
 ---
+<!-- <div class="jumbotron jumbotron-fluid" style="background:transparent url('assets/universe.jpg') 50% 15% /cover"> -->
 <div class="jumbotron jumbotron-fluid">
 	<div class="container text-center">
 		<h1 class="display-4">Publications</h1>
@@ -11,28 +12,30 @@ title: Jingfan Sun | Publications
 
 <div class="container">
 	<div class="row">
-		<div class="col-lg-8 col-md-10 mx-auto">
-
-			<!-- Under Review -->
-
+		<div class="col-lg-10 col-md-20 mx-auto">
 			<!-- Journal Articles -->
 			<h3 id="journal-articles">Journal Articles</h3>
-
 			<ol class="lead">
 				{% for post in site.categories.publications %}
 				{% if post.publication-type == 'journal' %}
+				<div class="row">
+					<div class="col-lg-10 mx-auto">
 
-				<li>
-					<a href="{{ post.url }}">{{ post.title }}</a>
-					{% if post.pdf %}
-					<a href="{{ post.pdf }}" class="btn btn-outline-info btn-sm">PDF</a>
-					{% endif %}
-					{% if post.external-url %}
-					<a href="{{ post.external-url }}" class="btn btn-outline-info btn-sm">URL</a>
-					{% endif %}
-					<a class="blockquote-footer"> {{ post.author }} </a>
-					<a class="blockquote-footer"><em> {{ post.journal }}, {{ post.year }} </em></a> 
-				</li>
+						<li>
+							<a href="{{ post.url }}">{{ post.title }}</a>
+							<a class="blockquote-footer"> {{ post.author }} </a>
+							<a class="blockquote-footer"><em> {{ post.journal }}, {{ post.year }} </em></a> 
+						</li>
+					</div>
+					<div class="col mx-auto">
+						{% if post.pdf %}
+						<a href="{{ post.pdf }}" class="btn btn-outline-info btn-sm">PDF</a>
+						{% endif %}
+						{% if post.external-url %}
+						<a href="{{ post.external-url }}" class="btn btn-outline-info btn-sm">URL</a>
+						{% endif %}
+					</div>
+				</div>
 
 				{% endif %}
 				{% endfor %}
@@ -50,17 +53,24 @@ title: Jingfan Sun | Publications
 					{% for post in site.categories.publications %}
 					{% if post.publication-type == 'conference' %}
 
-					<li>
-						<a href="{{ post.url }}">{{ post.title }}</a>
+					<div class="row">
+					<div class="col-lg-10 mx-auto">
+
+						<li>
+							<a href="{{ post.url }}">{{ post.title }}</a>
+							<a class="blockquote-footer"> {{ post.author }} </a>
+							<a class="blockquote-footer"><em> {{ post.conference }}, {{ post.year }} </em></a> 
+						</li>
+					</div>
+					<div class="col mx-auto">
 						{% if post.pdf %}
 						<a href="{{ post.pdf }}" class="btn btn-outline-info btn-sm">PDF</a>
 						{% endif %}
 						{% if post.external-url %}
 						<a href="{{ post.external-url }}" class="btn btn-outline-info btn-sm">URL</a>
 						{% endif %}
-						<a class="blockquote-footer"> {{ post.author }} </a>
-						<a class="blockquote-footer"><em> {{ post.conference }}, {{ post.year }} </em></a> 
-					</li>
+					</div>
+				</div>
 
 					{% endif %}
 					{% endfor %}
@@ -72,17 +82,24 @@ title: Jingfan Sun | Publications
 					{% for post in site.categories.publications %}
 					{% if post.publication-type == 'report' %}
 
-					<li>
-						<a href="{{ post.url }}">{{ post.title }}</a>
+					<div class="row">
+					<div class="col-lg-10 mx-auto">
+
+						<li>
+							<a href="{{ post.url }}">{{ post.title }}</a>
+							<a class="blockquote-footer"> {{ post.author }} </a>
+							<a class="blockquote-footer"><em> {{ post.publisher }}, {{ post.year }} </em></a> 
+						</li>
+					</div>
+					<div class="col mx-auto">
 						{% if post.pdf %}
 						<a href="{{ post.pdf }}" class="btn btn-outline-info btn-sm">PDF</a>
 						{% endif %}
 						{% if post.external-url %}
 						<a href="{{ post.external-url }}" class="btn btn-outline-info btn-sm">URL</a>
 						{% endif %}
-						<a class="blockquote-footer"> {{ post.author }} </a>
-						<a class="blockquote-footer"><em> {{ post.publisher }}, {{ post.year }} </em></a> 
-					</li>
+					</div>
+				</div>
 
 					{% endif %}
 					{% endfor %}
