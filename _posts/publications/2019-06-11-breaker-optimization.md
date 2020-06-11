@@ -12,7 +12,7 @@ number: 5
 pages: 4133-4143
 ISSN:
 month:
-pdf:
+pdf: assets/publications/breaker-optimization.pdf
 external-url: https://ieeexplore.ieee.org/abstract/document/8734889
 ---
 

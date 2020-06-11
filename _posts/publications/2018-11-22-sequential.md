@@ -12,7 +12,7 @@ number: 9
 pages: 7290-7299
 ISSN:
 month:
-pdf:
+pdf: assets/publications/sequential.pdf
 external-url: https://ieeexplore.ieee.org/abstract/document/8543512
 ---
 

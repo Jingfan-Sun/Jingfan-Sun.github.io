@@ -12,7 +12,7 @@ number:
 pages: 1-5
 ISSN:
 month:
-pdf: assets/papers/Zhong2018b.pdf
+pdf: assets/publications/Zhong2018b.pdf
 external-url: https://ieeexplore.ieee.org/abstract/document/8586043
 ---
 

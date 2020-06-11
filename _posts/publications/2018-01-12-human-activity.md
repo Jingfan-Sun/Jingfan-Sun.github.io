@@ -2,7 +2,7 @@
 layout: post
 category: publications
 publication-type: conference
-id: converter-loss
+id: human-activity
 author: C. Zhong, <b>J. Sun</b>, J. Xie, S. Grijalva and A. P. S. Meliopoulos
 conference: 2018 IEEE International Conference on Consumer Electronics (ICCE)
 title: Real-time human activity-based energy management system using model predictive control
@@ -12,7 +12,7 @@ number:
 pages: 1-6
 ISSN:
 month:
-pdf:
+pdf: assets/publications/human-activity.pdf
 external-url: https://ieeexplore.ieee.org/abstract/document/8326070
 ---
 

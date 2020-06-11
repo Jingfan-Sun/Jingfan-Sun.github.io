@@ -23,7 +23,7 @@ title: Jingfan Sun | Publications
 				{% if post.publication-type == 'journal' %}
 
 				<li>
-					<a href="{{ post.url }}">{{ post.title }} ({{ post.year }})</a>
+					<a href="{{ post.url }}">{{ post.title }}</a>
 					{% if post.pdf %}
 					<a href="{{ post.pdf }}" class="btn btn-outline-info btn-sm">PDF</a>
 					{% endif %}
@@ -31,7 +31,7 @@ title: Jingfan Sun | Publications
 					<a href="{{ post.external-url }}" class="btn btn-outline-info btn-sm">URL</a>
 					{% endif %}
 					<a class="blockquote-footer"> {{ post.author }} </a>
-					<a class="blockquote-footer"><em> {{ post.journal }} </em></a> 
+					<a class="blockquote-footer"><em> {{ post.journal }}, {{ post.year }} </em></a> 
 				</li>
 
 				{% endif %}
@@ -51,7 +51,7 @@ title: Jingfan Sun | Publications
 					{% if post.publication-type == 'conference' %}
 
 					<li>
-						<a href="{{ post.url }}">{{ post.title }} ({{ post.year }})</a>
+						<a href="{{ post.url }}">{{ post.title }}</a>
 						{% if post.pdf %}
 						<a href="{{ post.pdf }}" class="btn btn-outline-info btn-sm">PDF</a>
 						{% endif %}
@@ -59,7 +59,7 @@ title: Jingfan Sun | Publications
 						<a href="{{ post.external-url }}" class="btn btn-outline-info btn-sm">URL</a>
 						{% endif %}
 						<a class="blockquote-footer"> {{ post.author }} </a>
-						<a class="blockquote-footer"><em> {{ post.conference }} </em></a> 
+						<a class="blockquote-footer"><em> {{ post.conference }}, {{ post.year }} </em></a> 
 					</li>
 
 					{% endif %}
@@ -73,7 +73,7 @@ title: Jingfan Sun | Publications
 					{% if post.publication-type == 'report' %}
 
 					<li>
-						<a href="{{ post.url }}">{{ post.title }} ({{ post.year }})</a>
+						<a href="{{ post.url }}">{{ post.title }}</a>
 						{% if post.pdf %}
 						<a href="{{ post.pdf }}" class="btn btn-outline-info btn-sm">PDF</a>
 						{% endif %}
@@ -81,7 +81,7 @@ title: Jingfan Sun | Publications
 						<a href="{{ post.external-url }}" class="btn btn-outline-info btn-sm">URL</a>
 						{% endif %}
 						<a class="blockquote-footer"> {{ post.author }} </a>
-						<a class="blockquote-footer"><em> {{ post.publisher }} </em></a> 
+						<a class="blockquote-footer"><em> {{ post.publisher }}, {{ post.year }} </em></a> 
 					</li>
 
 					{% endif %}
