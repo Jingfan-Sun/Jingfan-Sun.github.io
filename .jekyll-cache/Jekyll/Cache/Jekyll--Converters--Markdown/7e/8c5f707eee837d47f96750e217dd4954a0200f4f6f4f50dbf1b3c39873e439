@@ -1,4 +1,0 @@
-I"Á<h4 id="abstract">Abstract</h4>
-
-<p>The challenges of energy efficiency and comfort management of intelligent homes and buildings are usually tackled with methods relying on historical data and a large number sensors. In this paper, we propose a real-time human activity-based energy management system (HAEMS), which tracks and processes human movement, and achieves device control based on real-time data with a significantly reduced number of sensors. A human activity detection algorithm and a model predictive control scheme are developed and implemented to optimally manage energy. A multi-objective optimization problem is formulated to minimize electricity cost and control temperature for thermal comfort. The HAEMS is deployed in a scaled-down laboratory setup and the performance is evaluated in an embedded system and hardware environment. Experimental results show that this system is able to optimize both electricity cost and thermal comfort.</p>
-:ET

@@ -1,4 +1,0 @@
-I"º<h4 id="abstract">Abstract</h4>
-
-<p>Converters are a vital part of modern-day power systems. Converter losses are essential in determining the efficiency of power delivery. This paper presents a physically based modeling of converters for accurate evaluation of converter losses. It is a novel approach that can compute total losses for any type of converters with high fidelity as well as the distribution of losses among the various components of the converter. A standard modeling syntax is described in detail. Two example converters are constructed and their performance and losses are evaluated to demonstrate the usefulness of this modeling technique. Simulation results show that the method provides the total converter losses as well as the losses of each part of the converter components, making it an excellent tool for identifying the parts of a converter where most of losses occur. This information can be used for design optimization.</p>
-:ET
