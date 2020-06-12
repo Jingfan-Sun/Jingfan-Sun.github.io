@@ -1,4 +1,5 @@
 exclude: [Gemfile", "Gemfile.lock"]
+highlighter: rouge
 markdown: kramdown
 kramdown:
   input: GFM

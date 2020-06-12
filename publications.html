@@ -41,19 +41,19 @@ title: Jingfan Sun | Publications
 				{% endfor %}
 			</ol>
 
-			<!-- <h3 id="journal-articles">Journal Articles</h3>
-				<ol class="bibliography"></ol> -->
+		<!-- <h3 id="journal-articles">Journal Articles</h3>
+			<ol class="bibliography"></ol> -->
 
 
-				<!-- Conference Proceedings -->
+			<!-- Conference Proceedings -->
 
-				<h3 id="conference_proceedings">Conference Proceedings</h3>
+			<h3 id="conference_proceedings">Conference Proceedings</h3>
 
-				<ol class="lead">
-					{% for post in site.categories.publications %}
-					{% if post.publication-type == 'conference' %}
+			<ol class="lead">
+				{% for post in site.categories.publications %}
+				{% if post.publication-type == 'conference' %}
 
-					<div class="row">
+				<div class="row">
 					<div class="col-lg-10 mx-auto">
 
 						<li>
@@ -72,17 +72,17 @@ title: Jingfan Sun | Publications
 					</div>
 				</div>
 
-					{% endif %}
-					{% endfor %}
-				</ol>
+				{% endif %}
+				{% endfor %}
+			</ol>
 
-				<h3 id="technical-reports">Technical Reports</h3>
+			<h3 id="technical-reports">Technical Reports</h3>
 
-				<ol class="lead">
-					{% for post in site.categories.publications %}
-					{% if post.publication-type == 'report' %}
+			<ol class="lead">
+				{% for post in site.categories.publications %}
+				{% if post.publication-type == 'report' %}
 
-					<div class="row">
+				<div class="row">
 					<div class="col-lg-10 mx-auto">
 
 						<li>
@@ -101,10 +101,15 @@ title: Jingfan Sun | Publications
 					</div>
 				</div>
 
-					{% endif %}
-					{% endfor %}
-				</ol>
+				{% endif %}
+				{% endfor %}
+			</ol>
 
-			</div>
 		</div>
 	</div>
+</div>
+{% highlight ruby %}
+def foo
+  puts 'foo'
+end
+{% endhighlight %}

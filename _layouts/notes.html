@@ -9,7 +9,8 @@
 	<div class="jumbotron jumbotron-fluid">
 		<div class="container text-center">
 			<h3>{{ page.title }}</h3>
-			<a class="lead">{{ page.author }}</a>
+			<a class="lead">{{ page.date | date: "%b %-d, %Y" }}, 
+            <em>{{ page.content | number_of_words }}</em> words</a>
 		</div>
 	</div>
 
