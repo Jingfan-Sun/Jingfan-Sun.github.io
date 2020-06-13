@@ -1,7 +1,7 @@
 ---
 layout: notes
 category: notes
-tag: tech_tips
+tag: [tech_tips]
 title: Setup Dual Boot of Ubuntu and Windows at Home for Remote Development
 ---
 
@@ -29,6 +29,7 @@ If we just want to `ssh` to ubuntu from home network, just use the internal ip.
 
 If we want to `ssh` from outside internet, we need to setup `port forwarding` in the router (<https://ubuntuforums.org/showthread.php?t=1558871>, <https://unix.stackexchange.com/questions/19620/ssh-port-forward-to-access-my-home-machine-from-anywhere>)
 
+{: .center}
 ![](/assets/imgs/Screenshot from 2019-02-09 20-34-35.png){:height="70%" width="70%"}
 
 To make the `ssh` more secure, we would use `rsa` key (<https://help.ubuntu.com/community/SSH/OpenSSH/Keys>)
@@ -67,7 +68,7 @@ $ vncserver -depth 16 -geometry 1734x1080
 
 to start the vncserver explicitly. The vncserver should be start by this command everytime after reboot. It can be killed with 
 
-```
+```shell
 $ vncserver -kill :1
 ```
 
@@ -75,7 +76,8 @@ The terminal launch problem can be solved by [ref](https://ubuntuforums.org/show
 
 On mac, we can use the native vnc client in `Finder` as in [ref](https://cat.pdx.edu/platforms/mac/remote-access/vnc-to-linux/) or `Chicken vnc` like [ref](https://kb.wisc.edu/cae/page.php?id=6245).
 
-![](/assets/imgs/image-20190815111906178.png){:height="50%" width="50%"}
+{: .center}
+![](/assets/imgs/image-20190815111906178.png){:height="60%" width="60%"}
 
 We may also use `screen sharing` in Ubuntu 18.04 like [this](https://websiteforstudents.com/access-ubuntu-18-04-lts-beta-desktop-via-vnc-from-windows-machines/). This is not tested yet.
 

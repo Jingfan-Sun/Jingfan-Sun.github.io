@@ -3,37 +3,39 @@ layout: default
 title: Jingfan Sun | Notes
 ---
 <div class="jumbotron jumbotron-fluid">
-  <div class="container text-center">
-    <h1 class="display-4">Notes</h1>
-    <p class="lead"></p>
-  </div>
+    <div class="container text-center">
+        <h1 class="display-4">Notes</h1>
+        <p class="lead"></p>
+    </div>
 </div>
 
 <div class="container">
-  <div class="row">
-    <div class="col-lg-10 col-md-20 mx-auto">
-      <div class="text-right">
-        <button type="button" class="topic btn btn-success btn-sm" data-name="all">
-          All <span class="badge badge-light">{% assign counter = 0 %}{% for item in site.categories.notes %}{% assign counter=counter | plus:1 %}{% endfor %}{{ counter }}</span>
-        </button>
-        <button type="button" class="topic btn btn-info btn-sm" data-name="tech_tips">
-          Tech Tips <span class="badge badge-light">{% assign counter = 0 %}{% for item in site.categories.notes %}{% if item.tag == 'tech_tips' %}{% assign counter=counter | plus:1 %}{% endif %}{% endfor %}{{ counter }}</span>
-        </button>
-      </div>
-      <ul class="lead">
-        {% for post in site.categories.notes %}
-        <li>
-          <span class="tags" style="display: none">{{ post.tags | jsonify}}</span>
-          <a href="{{ post.url }}">{{ post.title }}</a>
-          <a class="blockquote-footer">
-            {{ post.date | date: "%b %-d, %Y" }}, 
-            <em>{{ post.content | number_of_words }}</em> words
-          </a>
-        </li>
-        {% endfor %}
-      </ul>
+    <div class="row">
+        <div class="col-lg-10 col-md-20 mx-auto">
+            <div class="text-right">
+                <button type="button" class="topic btn btn-success btn-sm" data-name="all">
+                    All <span
+                        class="badge badge-light">{% assign counter = 0 %}{% for item in site.categories.notes %}{% assign counter=counter | plus:1 %}{% endfor %}{{ counter }}</span>
+                </button>
+                <button type="button" class="topic btn btn-info btn-sm" data-name="tech_tips">
+                    Tech Tips <span
+                        class="badge badge-light">{% assign counter = 0 %}{% for item in site.categories.notes %}{% if item.tag contains 'tech_tips' %}{% assign counter=counter | plus:1 %}{% endif %}{% endfor %}{{ counter }}</span>
+                </button>
+            </div>
+            <ul class="lead">
+                {% for post in site.categories.notes %}
+                <li>
+                    <span class="tags" style="display: none">{{ post.tags | jsonify}}</span>
+                    <a href="{{ post.url }}">{{ post.title }}</a>
+                    <a class="blockquote-footer">
+                        {{ post.date | date: "%b %-d, %Y" }},
+                        <em>{{ post.content | number_of_words }}</em> words
+                    </a>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
     </div>
-  </div>
 </div>
 
 <script src="/js/filter.js"></script>
