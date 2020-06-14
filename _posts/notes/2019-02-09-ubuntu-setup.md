@@ -5,13 +5,13 @@ tag: [tech_tips]
 title: Setup Dual Boot of Ubuntu and Windows at Home for Remote Development
 ---
 
-#### 1. Check the windows boot mode
+#### Check the windows boot mode
 
 <https://www.easyuefi.com/resource/check-windows-is-booted-in-uefi-mode.html>
 
 My system is in `legacy` mode, so the max partition on a single physical disk is 4. 
 
-#### 2. Install ubuntu dual boot alongside legacy windows
+#### Install ubuntu dual boot alongside legacy windows
 
 <http://dailylinuxuser.com/2015/11/how-to-install-ubuntu-linux-alongside_8.html>
 
@@ -19,11 +19,11 @@ Note: it is different for `legacy` and `UEFI` windows dual system.
 
 <http://dailylinuxuser.com/2015/11/how-to-install-ubuntu-linux-alongside_8.html>
 
-#### 3. setup SSH server on ubuntu
+#### Setup SSH server on ubuntu
 
 <http://ubuntuhandbook.org/index.php/2016/04/enable-ssh-ubuntu-16-04-lts/>
 
-#### 4. SSH to ubuntu
+#### SSH to ubuntu
 
 If we just want to `ssh` to ubuntu from home network, just use the internal ip.
 
@@ -38,13 +38,13 @@ If we already have the `rsa` key on Mac, for example used for Github, we need to
 
 Use `sudo service ssh status` to monitor the logs of the `SSH` connection in case hackers blocks in.
 
-#### 5. reboot to Windows from Terminal
+#### Reboot to Windows from Terminal
 
 Follow <http://www.webupd8.org/2010/10/how-to-reboot-in-windows-from-ubuntu.html> to update the `Grub` configuration first.
 
 In ubuntu, use `sudo grub-reboot 4` to set the next default boot system in `Grub` to Windows. Then, use `reboot` to reboot the system. This default setting only works for next reboot. If you reboot from Windows again, the `Grub` default system will be `0`, i.e., ubuntu, again.
 
-#### 6. setup X11 through ssh
+#### Setup X11 through ssh
 
 Since X11 is not installed by default in current release of maxOS, we first install `XQuartz`, which is the official X11 on our mac. The steps are 
 
@@ -54,7 +54,7 @@ Since X11 is not installed by default in current release of maxOS, we first inst
 
 [ref](https://uisapp2.iu.edu/confluence-prd/pages/viewpage.action?pageId=280461906)
 
-#### 7. setup vnc remote desktop
+#### Setup vnc remote desktop
 
 Follow the steps in [ref1](https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-vnc-on-ubuntu-14-04), first we need to install `tightvncserver` on the target ubuntu, we have two options here for how the desktop looks like
 

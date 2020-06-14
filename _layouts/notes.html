@@ -3,28 +3,32 @@
 
 {% include head.html %}
 
-<body>
+<body data-spy="scroll" data-target="#toc">
 	{% include navbar.html %}
 
 	<div class="jumbotron jumbotron-fluid">
 		<div class="container text-center">
-			<h3>{{ page.title }}</h3>
-			<a class="lead">{{ page.date | date: "%b %-d, %Y" }}, 
-            <em>{{ page.content | number_of_words }}</em> words</a>
+			<p class="notes_title">{{ page.title }}</p>
+			<a class="lead">{{ page.date | date: "%b %-d, %Y" }},
+				<em>{{ page.content | number_of_words }}</em> words</a>
 		</div>
 	</div>
 
-	<div class="container">
+	<div class="container-fluid">
 		<div class="row">
-			<div class="col-lg-8 col-md-10 mx-auto">
+			<nav class="col-md-3">
+					<nav id="toc" data-toggle="toc" class="sticky-top"></nav>
+			</nav>
+			<div class="col-md-6 mx-auto">
 
 				{{ content }}
 
 			</div>
+			<div class="col-md-3 d-none d-md-block"></div>
 		</div>
 	</div>
 
 	{% include foot.html %}
-	</body>
+</body>
 
 </html>

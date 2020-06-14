@@ -8,6 +8,7 @@ kramdown:
   input: GFM
   auto_ids: true
   syntax_highlighter: rouge
+  parse_block_html: true
 
 url: "http://ambaboo.github.io" # the base hostname & protocol for your site
 plugins:
