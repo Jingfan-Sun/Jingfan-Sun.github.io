@@ -18,7 +18,7 @@ title: Jingfan Sun | Notes
                         class="badge badge-light">{% assign counter = 0 %}{% for item in site.categories.notes %}{% assign counter=counter | plus:1 %}{% endfor %}{{ counter }}</span>
                 </button>
                 <button type="button" class="topic btn btn-info btn-sm" data-name="knowledge">
-                    Knowledge Base <span
+                    Knowledge <span
                         class="badge badge-light">{% assign counter = 0 %}{% for item in site.categories.notes %}{% if item.tag contains 'knowledge' %}{% assign counter=counter | plus:1 %}{% endif %}{% endfor %}{{ counter }}</span>
                 </button>
                 <button type="button" class="topic btn btn-info btn-sm" data-name="tech_tips">
@@ -26,6 +26,7 @@ title: Jingfan Sun | Notes
                         class="badge badge-light">{% assign counter = 0 %}{% for item in site.categories.notes %}{% if item.tag contains 'tech_tips' %}{% assign counter=counter | plus:1 %}{% endif %}{% endfor %}{{ counter }}</span>
                 </button>
             </div>
+            <br>
             <ul class="lead">
                 {% for post in site.categories.notes %}
                 <li>
