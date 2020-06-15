@@ -10,6 +10,7 @@ Yes, it is hard to code in Fortran, especially when we want to use it to design 
 
 #### Usage
 **Message (since v4.6.0)**
+
 This routine can be inserted to anywhere in the `Script` section to display messages, warnings, and errors.
 ```fortran
 CALL EMTDC_MESSAGE(ICALL_NO, $#Component, 1, 1, "Messages")
@@ -20,6 +21,7 @@ CALL EMTDC_MESSAGE(ICALL_NO, $#Component, 1, 1, "Messages")
 - `5th` argument is the content of message to display
 
 **Warning**
+
 This routine can be used to display warnings in any PSCAD version.
 ```fortran
 CALL EMTDC_WARN(ICALL_NO, $#Component, 1, "Messages")
