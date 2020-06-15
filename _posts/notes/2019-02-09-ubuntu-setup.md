@@ -34,7 +34,7 @@ If we want to `ssh` from outside internet, we need to setup `port forwarding` in
 
 To make the `ssh` more secure, we would use `rsa` key (<https://help.ubuntu.com/community/SSH/OpenSSH/Keys>)
 
-If we already have the `rsa` key on Mac, for example used for Github, we need to setup a different one (<https://security.stackexchange.com/questions/40050/best-practice-separate-ssh-key-per-host-and-user-vs-one-ssh-key-for-all-hos>). We can also setup `~/.ssh/config` to simplify the command to `ssh` to the remote server, i.e., ubuntu-home (<https://gist.github.com/jexchan/2351996>, <https://nerderati.com/2011/03/17/simplify-your-life-with-an-ssh-config-file/>). 
+If we already have the `rsa` key on Mac, for example used for Github, we need to setup a different one as descirbed [here](<https://security.stackexchange.com/questions/40050/best-practice-separate-ssh-key-per-host-and-user-vs-one-ssh-key-for-all-hos>). We can also setup `~/.ssh/config` to simplify the command to `ssh` to the remote server, i.e., ubuntu-home [[ref1](<https://gist.github.com/jexchan/2351996>), [ref2](<https://nerderati.com/2011/03/17/simplify-your-life-with-an-ssh-config-file/>)]. 
 
 Use `sudo service ssh status` to monitor the logs of the `SSH` connection in case hackers blocks in.
 
