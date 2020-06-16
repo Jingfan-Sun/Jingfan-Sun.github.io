@@ -1,7 +1,7 @@
 ---
 layout: notes
 category: notes
-tag: [tech_tips]
+tag: [tech_tips, arts]
 title: "Creating a Sleeping Cat Art in Illustrator"
 ---
 
