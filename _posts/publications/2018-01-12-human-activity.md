@@ -12,7 +12,7 @@ number:
 pages: 1-6
 ISSN:
 month:
-pdf: assets/publications/human-activity.pdf
+pdf: /human-activity.pdf
 external-url: https://ieeexplore.ieee.org/abstract/document/8326070
 ---
 

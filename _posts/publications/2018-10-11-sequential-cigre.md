@@ -12,7 +12,7 @@ number:
 pages:
 ISSN:
 month:
-pdf: assets/publications/Jingfan2018b.pdf
+pdf: /Jingfan2018b.pdf
 external-url: https://smartech.gatech.edu/handle/1853/60517
 ---
 
