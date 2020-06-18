@@ -2,7 +2,7 @@
 layout: notes
 category: notes
 tag: [knowledge]
-title: "GPU Performance Measurement"
+title: "GPU Performance Measurements and Limiters"
 ---
 
 ### What limits GPU performance?
