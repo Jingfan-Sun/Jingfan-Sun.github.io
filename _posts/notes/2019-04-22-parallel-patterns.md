@@ -50,7 +50,7 @@ Assuming all data resides in one thread block, a single phase scan
 
 If the data is too large to fit into one thread block, we take a two-phase approach
 
-- on GPU, using $b$ thread blocks, $O(\log(\frac{N}{b} + \log(b)))$:
+- on GPU, using $b$ thread blocks, $O(\log(\frac{N}{b}) + \log(b)) = O(\log(N))$:
     - Partition data to $N/b$ thread blocks, each block does parallel scan locally
     - Perform another parallel scan using the last element from each block, which is the sum of all elements within that block
     - Add the corresponding result from the second scan to all elements within each thread block
