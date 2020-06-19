@@ -60,24 +60,39 @@ If the data is too large to fit into one thread block, we take a two-phase appro
     - Perform parallel scan using the last element from each processor, which is the sum of all elements within that processor
     - Add the result of parallel scan on each processor to each of its local prefix sum
 
-<!-- ### Split: Many parallel threads need to partition data
-	○ Given: array of true and false elements (and payloads)
-	○ Return an array with all true elements at the beginning
-### Compact / Expand: Many parallel threads produce variable output / thread
-	○ Remove null elements
-	○ Reserve Variable Storage Per Thread
-	○ Each thread must answer a simple question: “Where do I write my output?”
-		§ The answer depends on what other threads write!
+### Split, Compact, Expand
+
+{: .center}
+![](https://ambaboo-github-io-assets.s3.amazonaws.com/2019-04-22-parallel-patterns-split.png){:height="90%" width="90%"}
+
+- _Split_: re-order an array with all elements whose key is 1 at the beginning
+- _Compact_: remove null elements
+- _Expand_: each thread has writes to index with variable stride
+
+All these three patterns should answer **"where should each thred write its output?"** It all dependes on where other threads write. The position where each thread writes can be efficiently calculated with parallel scan.
 
 ### Segmented Scan
-	○ Scan + Barriers/Flags associated with certain positions in the input arrays. Operations don’t propagate beyond barriers
-	○ Doing lots of reductions of unpredictable size at the same time is the most common use
-	○ Think of doing sums/max/count/any over arbitrary sub-domains of your data
-	○ Common Usage Scenarios:
-		§ Determine which region/tree/group/object class an element belongs to and assign that as its new ID
-		§ Sort based on that ID
-		§ Operate on all of the regions/trees/groups/objects in parallel, no matter what their size or number
-### Sort
+
+_Scan only within regions (seperated by `Key`, size only known on run-time)_
+
+- Regions are seperated by barriers (`1`s) in `Key`
+- Operations on `Value` don't propagate beyonf barriers
+- `Key` and `Value` do scans at once (seperately)
+    - `Key` scan normally using operator `OR`
+    - `Value` only performs operation when its associated `Key` is `0` in current stage
+
+{: .center}
+![](https://ambaboo-github-io-assets.s3.amazonaws.com/2019-04-22-parallel-patterns-segment-scan.png){:height="90%" width="90%"}
+
+- Doing lots of reductions of unpredictable size at the same time is the most common use
+- Doing sums/max/count/any over arbitrary sub-domains of your data
+- Common Usage Scenarios [4]:
+    - Determine which region/tree/group/object class an element belongs to and assign that as its new ID
+    - Sort based on that ID
+    - Operate on all of the regions/trees/groups/objects in parallel, no matter what their size or number
+- Doing divide-and-conquer type algorithms, following similar procedure like above
+
+<!-- ### Sort
 	○ Sorted lists can be processed by segmented scan
 	○ Sort data to restore memory and execution coherence
 	○ Radix sort is faster than comparison-based sorts
@@ -105,3 +120,5 @@ If the data is too large to fit into one thread block, we take a two-phase appro
 [2]. <http://mathonline.wikidot.com/associativity-and-commutativity-of-binary-operations>
 
 [3]. CSE 6220 - High Performance Computing, Georgia Tech
+
+[4]. <https://wrf.ecse.rpi.edu/Teaching/parallel-s2018/stanford/lectures/lecture_7/parallel_patterns_2.pdf>
