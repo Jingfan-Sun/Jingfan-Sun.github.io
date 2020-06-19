@@ -92,11 +92,63 @@ _Scan only within regions (seperated by `Key`, size only known on run-time)_
     - Operate on all of the regions/trees/groups/objects in parallel, no matter what their size or number
 - Doing divide-and-conquer type algorithms, following similar procedure like above
 
-<!-- ### Sort
-	○ Sorted lists can be processed by segmented scan
-	○ Sort data to restore memory and execution coherence
-	○ Radix sort is faster than comparison-based sorts
-### MapReduce
+### Sort
+
+- Sorting is useful for almost everything, we may sort the dataset by `Key` and process using segmented scan
+- Sorting is a standard approach but may not be the optimized solution
+- Sorting is helpful because it improves memory and execution coherence (move related data closer)
+- Optimizaed GPU sorting already exists
+	- Radix sort (bucket sort) is faster than comparison-based sorts, if you can generate fixed-size `Key`
+
+**Example: Parallel Merge Sort**
+
+<!-- Use no more than $\log(n)$ processors. -->
+
+$$
+\begin{equation}
+\begin{split}
+T(n, p) &= T(\frac{n}{2}, \frac{p}{2}) + O(n) \\
+&= T(\frac{n}{4}, \frac{p}{4}) + O(\frac{n}{2}) + O(n) \\
+&= ... \\
+&= T(\frac{n}{p}, 1) + O(n + \frac{n}{2} + ... + \frac{n}{p/2}) \\
+&= O(\frac{n}{p} \log \frac{n}{p} + n)
+\end{split}
+\end{equation}
+$$
+
+**Example: Bitonic Sort**
+
+- Bitonic Sequence
+	- increases first then decreases, OR
+	- decreases first then increases, OR
+	- you can shift the sequence to make the first two cases true
+- Bitonic Split: split a bitonic sequence $l$ into two half, $l_{\min}$ and $l_{\max}$
+	- $l_{\min} = \min(x_0, x_{n/2}), \min(x_1, x_{n/2+1}), ..., \min(x_{n/2-1}, x_{n-1})$
+	- $l_{\max} = \max(x_0, x_{n/2}), \max(x_1, x_{n/2+1}), ..., \max(x_{n/2-1}, x_{n-1})$
+	- the resulting $l_{\min}$ and $l_{\max}$ are still bitonic, and $\max(l_{\min}) \leq \min(l_{\max})$
+- Bitonic Merge: turning a bitonic sequence into a sorted sequence using repeated bitonic split operations
+	- $BM(p, p) = O(\log p)$
+
+{: .center}
+![](https://ambaboo-github-io-assets.s3.amazonaws.com/2019-04-22-parallel-patterns-bitonic.png){:height="60%" width="60%"}
+
+The right arrows in the figure above refers to `CompareExchange` - compare two values and move smaller one along the arrow
+$$
+\begin{equation}
+\begin{split}
+T(p, p) &= BM(2, 2) + BM(4, 4) + ... + BM(p, p) \\
+&= 1 + 2 + ... + \log p \\
+&= O(\log^2 p)
+\end{split}
+\end{equation}
+$$
+
+When $n>p$
+- sort $n/p$ locally on each processor - $O(\frac{n}{p} \log \frac{n}{p})$
+- Run bitonic sort with `CompareExchange` replaced by `MergeSplit` - merge two sorted arrays and split into two
+- $O(\frac{n}{p} \log \frac{n}{p} + \frac{n}{p} \log^2 p)$
+	
+<!-- ### MapReduce
 	○ Combination of sort and reduction (scan)
 	○ Map
 		§ Map a function over a domain.
