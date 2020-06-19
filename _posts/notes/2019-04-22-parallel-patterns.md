@@ -69,7 +69,7 @@ If the data is too large to fit into one thread block, we take a two-phase appro
 - _Compact_: remove null elements
 - _Expand_: each thread has writes to index with variable stride
 
-All these three patterns should answer **"where should each thred write its output?"** It all dependes on where other threads write. The position where each thread writes can be efficiently calculated with parallel scan.
+All these three patterns should answer **"where should each thred write its output?"** It all dependes on where other threads write. The position where each thread writes can be efficiently calculated with parallel scan [4].
 
 ### Segmented Scan
 
@@ -86,7 +86,7 @@ _Scan only within regions (seperated by `Key`, size only known on run-time)_
 
 - Doing lots of reductions of unpredictable size at the same time is the most common use
 - Doing sums/max/count/any over arbitrary sub-domains of your data
-- Common Usage Scenarios [4]:
+- Common Usage Scenarios [5]:
     - Determine which region/tree/group/object class an element belongs to and assign that as its new ID
     - Sort based on that ID
     - Operate on all of the regions/trees/groups/objects in parallel, no matter what their size or number
@@ -148,24 +148,23 @@ When $n>p$
 - Run bitonic sort with `CompareExchange` replaced by `MergeSplit` - merge two sorted arrays and split into two
 - $O(\frac{n}{p} \log \frac{n}{p} + \frac{n}{p} \log^2 p)$
 	
-<!-- ### MapReduce
-	○ Combination of sort and reduction (scan)
-	○ Map
-		§ Map a function over a domain.
-		§ Function is provided by the user. 
-		§ Function can be anything which produces a (key, value) pair
-			□ Value can just be a pointer to arbitrary data structure
-	○ Sort
-		§ All the (key, value) pairs are sorted based on their keys
-		§ Happens implicitly
-		§ Creates runs of (k, v) pairs with same key
-		§ User usually has no control over sort function
-	○ Reduce
-		§ Reduce function is provided by the user
-			□ Can be simple plus, max,…
-		§ Library makes sure that values from one key don’t propagate to another (segscan)
-		§ Final result is a list of keys and final values (or arbitrary data structures) -->
+### MapReduce
 
+{: .center}
+![](https://ambaboo-github-io-assets.s3.amazonaws.com/2019-04-22-parallel-patterns-mapreduce.png){:height="60%" width="60%"}
+
+MapReduce [6] combines sort and scan described above.
+- Map
+	- User provides a function to apply to the input data: give me one input, apply some operations, and writes to one output, no communications between different instances of `Map`
+	- Function can be anything which produces a (`key`, `value`) pair
+		- `value` no necessraily to be a number, it can just be a pointer to arbitrary data structure
+- Sort
+	- (`key`, `value`) pairs are sorted based on their `key`s implicitly
+	- Creates runs of (`key`, `value`) pairs with same `key`
+- Reduce
+	- Segmented Scan, function provided by the user, could be simple plus, max, etc.
+	- Final result is a list of `key`s and final values (or arbitrary data structures)
+	
 ### Reference
 [1]. <https://developer.download.nvidia.com/assets/cuda/files/reduction.pdf>
 
@@ -173,4 +172,8 @@ When $n>p$
 
 [3]. CSE 6220 - High Performance Computing, Georgia Tech
 
-[4]. <https://wrf.ecse.rpi.edu/Teaching/parallel-s2018/stanford/lectures/lecture_7/parallel_patterns_2.pdf>
+[4]. <https://wrf.ecse.rpi.edu/Teaching/parallel-s2018/stanford/lectures/lecture_6/parallel_patterns_1.pdf>
+
+[5]. <https://wrf.ecse.rpi.edu/Teaching/parallel-s2018/stanford/lectures/lecture_7/parallel_patterns_2.pdf>
+
+[6]. <https://research.google.com/archive/mapreduce-osdi04-slides/index-auto-0007.html>
