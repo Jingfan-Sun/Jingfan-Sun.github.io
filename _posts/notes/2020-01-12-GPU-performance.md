@@ -88,6 +88,19 @@ The figure below shows the SIMT architecture of Nvidia GPU. Left side (SI) runs 
 {: .center}
 ![](https://ambaboo-github-io-assets.s3.amazonaws.com/2020-01-12-GPU-performance-fig1.png){:height="60%" width="60%"}
 
+**How to schedule blocks onto SMs**
+
+- SM will schedule as many blocks it can hold depending on how much resources (registers, shared mem) each block require and how much resources are available
+    - Pool of registers and shared memory per SM
+    - Each thread block grabs registers & shared memory
+    - If one or the other is fully utilized -> no more thread blocks
+- No guarantee of ordering among thread blocks
+- HW will schedule thread blocks as soon as a previous thread block finishes
+- Each thread block is mapped to one or more warps
+- HW schedule each warp independently
+
+**How to schedule warps**
+
 - SI: only one instruction from one warp executed at any given instance, per scheduler
     - each warp has one PC
     - warps in a SM share one fetching unit (serial)
@@ -96,6 +109,9 @@ The figure below shows the SIMT architecture of Nvidia GPU. Left side (SI) runs 
     - there is a pool of warps to be scheduled or chosen from 
     - schedule unit pick one instruction from one warp to execute
 - MT: all 32 threads in a warp execute the same instruction when selected
+
+{: .center}
+![](https://ambaboo-github-io-assets.s3.amazonaws.com/2020-01-12-GPU-performance-fig2.png){:height="60%" width="60%"}
 
 #### Supply vs. Demand
 
