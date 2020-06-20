@@ -152,8 +152,8 @@ When $n>p$
 ### MapReduce
 
 {: .center}
-![](){:height="60%" width="60%"}
-https://ambaboo-github-io-assets.s3.amazonaws.com/2019-04-22-parallel-patterns-mapreduce.png
+![](https://ambaboo-github-io-assets.s3.amazonaws.com/2019-04-22-parallel-patterns-mapreduce.png){:height="60%" width="60%"}
+
 MapReduce [6] combines sort and scan described above.
 - Map
 	- User provides a function to apply to the input data: give me one input, apply some operations, and writes to one output, no communications between different instances of `Map`
