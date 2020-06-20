@@ -3,6 +3,7 @@ layout: notes
 category: notes
 tag: [tech_tips, arts]
 title: "Creating a Sleeping Cat Art in Illustrator"
+cover_img: "https://ambaboo-github-io-assets.s3.amazonaws.com/2020-06-15-sleeping-cat-cover.png"
 ---
 
 ### Argo sleeps in a Circle!

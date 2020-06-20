@@ -3,6 +3,7 @@ layout: notes
 category: notes
 tag: [tech_tips]
 title: "How to convert from Latitude and Longitude to Address"
+cover_img: "https://ambaboo-github-io-assets.s3.amazonaws.com/2018-02-23-lat-long-to-address-cover.png"
 ---
 
 #### Introduction

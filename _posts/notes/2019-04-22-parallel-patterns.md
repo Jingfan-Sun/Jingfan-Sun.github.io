@@ -3,6 +3,7 @@ layout: notes
 category: notes
 tag: [knowledge]
 title: "Parallel Patterns"
+cover_img: "https://ambaboo-github-io-assets.s3.amazonaws.com/2019-04-22-parallel-patterns-reduce.png"
 ---
 
 ### Why Parallel with Patterns?
@@ -151,8 +152,8 @@ When $n>p$
 ### MapReduce
 
 {: .center}
-![](https://ambaboo-github-io-assets.s3.amazonaws.com/2019-04-22-parallel-patterns-mapreduce.png){:height="60%" width="60%"}
-
+![](){:height="60%" width="60%"}
+https://ambaboo-github-io-assets.s3.amazonaws.com/2019-04-22-parallel-patterns-mapreduce.png
 MapReduce [6] combines sort and scan described above.
 - Map
 	- User provides a function to apply to the input data: give me one input, apply some operations, and writes to one output, no communications between different instances of `Map`
@@ -164,7 +165,7 @@ MapReduce [6] combines sort and scan described above.
 - Reduce
 	- Segmented Scan, function provided by the user, could be simple plus, max, etc.
 	- Final result is a list of `key`s and final values (or arbitrary data structures)
-	
+
 ### Reference
 [1]. <https://developer.download.nvidia.com/assets/cuda/files/reduction.pdf>
 

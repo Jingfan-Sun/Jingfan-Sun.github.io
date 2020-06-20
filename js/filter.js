@@ -20,7 +20,7 @@ for (var i = 0; i < filters.length; i++) {
         }
 
         // console.log(tagName);
-        var liEls = document.getElementsByTagName('li');
+        var liEls = document.getElementsByClassName('items-to-hide');
 
         var numShown = 0;
 

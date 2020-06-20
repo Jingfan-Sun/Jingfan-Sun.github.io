@@ -3,6 +3,7 @@ layout: notes
 category: notes
 tag: [tech_tips]
 title: "How to debug Fortran in PSCAD: Message, Warning, and Error"
+cover_img: "https://ambaboo-github-io-assets.s3.amazonaws.com/2019-01-23-PSCAD-debug-fig3.PNG"
 ---
 
 #### Why we need this?

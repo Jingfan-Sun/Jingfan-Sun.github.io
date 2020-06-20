@@ -3,6 +3,7 @@ layout: notes
 category: notes
 tag: [knowledge]
 title: "GPU Performance Measurements and Limiters"
+cover_img: "https://ambaboo-github-io-assets.s3.amazonaws.com/2020-01-12-GPU-performance-cover.png"
 ---
 
 ### What limits GPU performance?

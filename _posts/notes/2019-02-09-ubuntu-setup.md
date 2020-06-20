@@ -3,6 +3,7 @@ layout: notes
 category: notes
 tag: [tech_tips]
 title: Setup Dual Boot of Ubuntu and Windows at Home for Remote Development
+cover_img: "https://ambaboo-github-io-assets.s3.amazonaws.com/2019-02-09-ubuntu-setup-cover.png"
 ---
 
 #### Check the windows boot mode
