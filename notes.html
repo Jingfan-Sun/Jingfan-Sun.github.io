@@ -16,14 +16,14 @@ title: Jingfan Sun | Notes
             <div class="row no-gutters">
                 {% for post in site.categories.notes %}
                 <!-- <div class="col-md-12" style="line-height:100%;"><br></div> -->
-                <div class="col-md-3 items-to-hide">
+                <div class="col-md-4 items-to-hide">
                     <span class="tags" style="display: none">{{ post.tags | jsonify}}</span>
                     <img src="{{ post.cover_img }}" class="card-img">
                 </div>
-                <div class="col-md-9 items-to-hide">
+                <div class="col-md-8 items-to-hide">
                     <span class="tags" style="display: none">{{ post.tags | jsonify}}</span>
                     <div class="card-body">
-                        <a class="h4" href="{{ post.url }}">{{ post.title }}</a>
+                        <a class="h3" href="{{ post.url }}">{{ post.title }}</a>
                         <br>
                         <a class="lead" class="blockquote-footer">
                             {{ post.date | date: "%b %-d, %Y" }},
@@ -33,7 +33,9 @@ title: Jingfan Sun | Notes
                 </div>
                 <div class="col-md-12 items-to-hide">
                     <span class="tags" style="display: none">{{ post.tags | jsonify}}</span>
+                    <p>&nbsp;</p>
                     <hr style="width: 100%; color: rgba(0,0,0,0.1); height: 0.2pt; background-color:rgba(0,0,0,0.1);" />
+                    <p>&nbsp;</p>
                 </div>
                 {% endfor %}
             </div>
