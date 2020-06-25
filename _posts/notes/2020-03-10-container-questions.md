@@ -13,7 +13,7 @@ cover_img: "https://ambaboo-github-io-assets.s3.amazonaws.com/2020-03-10-contain
 |:-|:-|:-|
 | Weight | Heavyweight | Lightweight |
 | OS | Each VM runs in its own OS | All containers share the host OS |
-|Virtualization|Hardware-level virtualization|OS virtualization|
+|Virtualization|Hardware virtualization|OS virtualization|
 |Startup|Startup time in minutes|Startup time in milliseconds|
 |Memory|Allocates required memory|Requires less memory space|
 |Isolation|Fully isolated and hence more secure|Process-level isolation, possibly less secure|
