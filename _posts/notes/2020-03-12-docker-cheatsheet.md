@@ -51,4 +51,7 @@ docker container rm $(docker container ls -aq)
 
 ### Container Life Cycle
 
-### Swarm
+```shell
+# reads a Dockerfile and containerizes an application
+docker image build -t NAME[:TAG] PATH
+```
