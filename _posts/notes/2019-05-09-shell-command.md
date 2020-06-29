@@ -2,7 +2,7 @@
 layout: notes
 category: notes
 tag: [knowledge]
-title: Useful Shell Commands that are easy to Forget
+title: Useful Shell Staffs that are easy to Forget
 cover_img: "https://ambaboo-github-io-assets.s3.amazonaws.com/2019-05-09-shell-command-cover.png"
 ---
 
@@ -19,7 +19,7 @@ sudo su
 cd -
 ```
 
-#### write to a filw with `sudo`
+#### write to a file with `sudo`
 
 ```shell
 # assuming abc.txt requires root permission
