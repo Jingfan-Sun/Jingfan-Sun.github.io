@@ -50,3 +50,7 @@ git rebase master feature
 #              /
 # D---E---F---G master
 ```
+
+### Reference
+
+[1]. <https://missing.csail.mit.edu/2020/version-control/>
