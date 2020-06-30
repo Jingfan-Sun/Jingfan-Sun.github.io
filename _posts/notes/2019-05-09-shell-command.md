@@ -4,7 +4,10 @@ category: notes
 tag: [knowledge]
 title: Useful Shell Staffs that are easy to Forget
 cover_img: "https://ambaboo-github-io-assets.s3.amazonaws.com/2019-05-09-shell-command-cover.png"
+published: false
 ---
+
+### Commands
 
 #### switch to `root` user's shell
 
@@ -25,4 +28,12 @@ cd -
 # assuming abc.txt requires root permission
 sudo echo hello > abc.txt # not working
 echo hello | sudo tee abc.txt # works, `tee` takes stdin andwrite to files
+```
+
+### Bash Scripting
+
+#### Variables
+
+```bash
+
 ```
