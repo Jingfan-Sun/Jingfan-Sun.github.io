@@ -32,6 +32,8 @@ echo hello | sudo tee abc.txt # works, `tee` takes stdin andwrite to files
 
 ### Bash Scripting
 
+Run a series of commands while using control flows.
+
 #### Variables
 
 ```bash
