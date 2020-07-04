@@ -39,3 +39,28 @@ Run a series of commands while using control flows.
 ```bash
 
 ```
+
+### Dotfile
+
+#### Tmux
+
+```bash
+# Sessions: workspace
+tmux # start a new session
+tmux new -s NAME # specify the NAME to start
+tmux ls # lists all curretn sessions
+tmux a # attach the last session
+tmux a -t NAME # attach the NAME session
+<C-b> d # detach the current session
+<C-d> # close the Panel
+exit # close the Panel
+# Windows: tabs
+<C-b> c # create a new windows within the session
+<C-b> N # go to the Nth window
+<C-b> n # go to the next window
+<C-b> p # go to the previous window
+<C-b> , # rename the current window
+<C-b> w # list current windows
+# Panes: splits
+
+```
