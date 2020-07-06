@@ -62,5 +62,10 @@ exit # close the Panel
 <C-b> , # rename the current window
 <C-b> w # list current windows
 # Panes: splits
-
+<C-b> <quote> # split horizontally
+<C-b> % # split vertically
+<C-b> <up,down,left,right> # move focus to the direction
+<C-b>+<up,down,left,right> # resize current pane to the direction
+<C-b> z # zoom in or zoom out of current pane
+<C-b> <space> # traverse pane arrangements
 ```
