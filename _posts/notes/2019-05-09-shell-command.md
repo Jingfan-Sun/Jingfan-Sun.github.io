@@ -68,4 +68,24 @@ exit # close the Panel
 <C-b>+<up,down,left,right> # resize current pane to the direction
 <C-b> z # zoom in or zoom out of current pane
 <C-b> <space> # traverse pane arrangements
+<C-b> [ # scroll up and down using <page-up> and <page-down>
+```
+
+### Security
+
+#### SSH keys croptography
+
+```shell
+# on local machine (client)
+# first generate the key pair (public key, private key)
+ssh-keygen
+# send the public key to remote machine, -i to specify the public key
+# this public key is stored in ~/.ssh/authorized_keys on remote machine
+ssh-copy-id -i ~/.ssh/id_rsa.pub username@xxx.xxx.xxx.xxx
+# 1. the remote machine sends a message to client
+# 2. the client sign this meesage using private key
+# sign(message, private key) -> signature
+# 3. the signature is sent to remote machine
+# verify(message, signature, public key) -> bool 
+# 4. the remote machine checks whether or not the signature is valid. Without private key, it is hard to make the verify function return true
 ```
