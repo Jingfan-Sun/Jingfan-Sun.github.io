@@ -40,7 +40,26 @@ Run a series of commands while using control flows.
 
 ```
 
-### Dotfile
+#### HERE document
+
+```bash
+# redirect the comamnd block to stdin of the COMMAND
+COMMAND <<LimitString
+command #1
+command #2
+...
+LimitString
+# Equivalent to
+COMMAND < command-file
+# where command-file contains 
+command #1
+command #2
+...
+```
+
+Choose the `LimitString` sufficiently unusual that it will not occur anywhere in the command line and confuse matters. [ref](https://tldp.org/LDP/abs/html/here-docs.html)
+
+### Terminal Tools
 
 #### Tmux
 
