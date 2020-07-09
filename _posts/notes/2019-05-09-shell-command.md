@@ -88,6 +88,20 @@ exit # close the Panel
 <C-b> z # zoom in or zoom out of current pane
 <C-b> <space> # traverse pane arrangements
 <C-b> [ # scroll up and down using <page-up> and <page-down>
+
+# copy in tmux [1]
+# default method
+<C-b> [ # 1. enter copy mode
+<page-up> <page-down> <arrow> # 2. navigate to where you want to copy
+<C-space> # 3. start copy
+<arrow> # 4. select what to copy
+<C-w> # 5 copy to `tmux` buffer
+<C-b> ] # paste using `tmux` buffer
+# vi mode: modify ~/.tmux.conf and use v, y, p
+# mouse mode: add following to ~/.tmux.conf
+set -g mouse on
+# then, use <C-b> [ to enter copy mode, use mouse to select and <C-c> to copy as normal
+# q to quit copy mode, and right click mouse to paste
 ```
 
 ### Security
@@ -108,3 +122,6 @@ ssh-copy-id -i ~/.ssh/id_rsa.pub username@xxx.xxx.xxx.xxx
 # verify(message, signature, public key) -> bool 
 # 4. the remote machine checks whether or not the signature is valid. Without private key, it is hard to make the verify function return true
 ```
+
+### Reference
+[1]. <https://www.rushiagr.com/blog/2016/06/16/everything-you-need-to-know-about-tmux-copy-pasting-ubuntu/>
