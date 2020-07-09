@@ -27,7 +27,21 @@ cd -
 ```shell
 # assuming abc.txt requires root permission
 sudo echo hello > abc.txt # not working
-echo hello | sudo tee abc.txt # works, `tee` takes stdin andwrite to files
+echo hello | sudo tee abc.txt # works, `tee` takes stdin and write to files
+```
+
+#### print commands to be executed (shell debug)
+
+```bash
+# [2]
+# print commands to be executed to `stderr` before any substitution and expansion is applied
+set -v
+# print everything as if it were executed, after any substitution and expansion is applied
+# `+` is prepended to indicate the depth-level
+set -x
+# to exit these modes
+set +v
+set +x
 ```
 
 ### Bash Scripting
@@ -125,3 +139,5 @@ ssh-copy-id -i ~/.ssh/id_rsa.pub username@xxx.xxx.xxx.xxx
 
 ### Reference
 [1]. <https://www.rushiagr.com/blog/2016/06/16/everything-you-need-to-know-about-tmux-copy-pasting-ubuntu/>
+
+[2]. <https://wiki.bash-hackers.org/scripting/debuggingtips#use_shell_debug_output>
