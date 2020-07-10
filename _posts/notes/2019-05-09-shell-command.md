@@ -44,6 +44,14 @@ set +v
 set +x
 ```
 
+#### size the terminal window on remote machine
+
+```bash
+# the prompt and commnads may not display correctly on remote machine you SSH to
+# use the following command to correct it
+resize
+```
+
 ### Bash Scripting
 
 Run a series of commands while using control flows.
