@@ -4,7 +4,7 @@ category: notes
 tag: [knowledge]
 title: Useful Shell Staffs that are easy to Forget
 cover_img: "https://ambaboo-github-io-assets.s3.amazonaws.com/2019-05-09-shell-command-cover.png"
-published: false
+published: true
 ---
 
 ### Commands
