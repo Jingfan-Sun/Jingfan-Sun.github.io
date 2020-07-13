@@ -52,6 +52,15 @@ set +x
 resize
 ```
 
+#### check the shared library dependecies of executable
+
+```bash
+# list the dependent shared libraries [3]
+ldd <executable>
+# if some libraries are missing, add to LD_LIBRARY_PATH
+export LD_LIBRARY_PATH=<path_to_search_for_library>
+```
+
 ### Bash Scripting
 
 Run a series of commands while using control flows.
@@ -149,3 +158,5 @@ ssh-copy-id -i ~/.ssh/id_rsa.pub username@xxx.xxx.xxx.xxx
 [1]. <https://www.rushiagr.com/blog/2016/06/16/everything-you-need-to-know-about-tmux-copy-pasting-ubuntu/>
 
 [2]. <https://wiki.bash-hackers.org/scripting/debuggingtips#use_shell_debug_output>
+
+[3]. <https://amir.rachum.com/blog/2016/09/17/shared-libraries/>
