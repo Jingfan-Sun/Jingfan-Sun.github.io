@@ -61,6 +61,14 @@ ldd <executable>
 export LD_LIBRARY_PATH=<path_to_search_for_library>
 ```
 
+#### Compress and Extract
+
+```bash
+# extract from .tgz file
+# -x: extract, -v: verbose, -z: gnnuzip, -f: last falg just before the file
+tar -xvzf <file.tgz>
+```
+
 ### Bash Scripting
 
 Run a series of commands while using control flows.
