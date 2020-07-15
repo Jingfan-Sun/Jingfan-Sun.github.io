@@ -69,6 +69,15 @@ export LD_LIBRARY_PATH=<path_to_search_for_library>
 tar -xvzf <file.tgz>
 ```
 
+#### redirect `stdout`, `stderr` or both to file
+
+```bash
+# redirect stdout and stderr to seperate files
+<cmd> > stdout.log 2> stderr.log
+# redirect both stdout and stderr to one file
+<cmd> &> stdout_err.log
+```
+
 ### Bash Scripting
 
 Run a series of commands while using control flows.
