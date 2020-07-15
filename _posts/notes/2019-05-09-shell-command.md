@@ -64,6 +64,8 @@ export LD_LIBRARY_PATH=<path_to_search_for_library>
 #### Compress and Extract
 
 ```bash
+# compress a dir to .tar.gz file [4]
+tar -czvf <archieve>.tar.gz <path-to-dir>
 # extract from .tgz file
 # -x: extract, -v: verbose, -z: gnnuzip, -f: last falg just before the file
 tar -xvzf <file.tgz>
@@ -177,3 +179,5 @@ ssh-copy-id -i ~/.ssh/id_rsa.pub username@xxx.xxx.xxx.xxx
 [2]. <https://wiki.bash-hackers.org/scripting/debuggingtips#use_shell_debug_output>
 
 [3]. <https://amir.rachum.com/blog/2016/09/17/shared-libraries/>
+
+[4]. <https://www.howtogeek.com/248780/how-to-compress-and-extract-files-using-the-tar-command-on-linux/>
