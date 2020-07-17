@@ -80,6 +80,12 @@ tar -xvzf <file.tgz>
 <cmd> &> stdout_err.log
 ```
 
+#### convert windows `\r\n`  file to unix `\n` file
+
+```
+dos2unix
+```
+
 ### Bash Scripting
 
 Run a series of commands while using control flows.
