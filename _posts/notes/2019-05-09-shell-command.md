@@ -179,6 +179,12 @@ ssh-copy-id -i ~/.ssh/id_rsa.pub username@xxx.xxx.xxx.xxx
 # 4. the remote machine checks whether or not the signature is valid. Without private key, it is hard to make the verify function return true
 ```
 
+### Config files
+
+#### Json
+
+#### Yaml
+
 ### Reference
 [1]. <https://www.rushiagr.com/blog/2016/06/16/everything-you-need-to-know-about-tmux-copy-pasting-ubuntu/>
 
