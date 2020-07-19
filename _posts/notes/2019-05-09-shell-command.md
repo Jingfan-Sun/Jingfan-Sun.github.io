@@ -181,6 +181,9 @@ ssh-copy-id -i ~/.ssh/id_rsa.pub username@xxx.xxx.xxx.xxx
 
 ### Config files
 
+#### Json vs. Yaml
+The biggest pain point of using Json as config file is that you are not able to write comments in Json.
+
 #### Json
 
 #### Yaml
