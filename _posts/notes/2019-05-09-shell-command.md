@@ -188,6 +188,22 @@ The biggest pain point of using Json as config file is that you are not able to 
 
 #### Yaml
 
+```yaml
+# list of list
+-
+  - item1
+  - item2
+-
+  - item3
+  - item4
+-> [["item1", "item2"], ["item3", "item4"]]
+# named list
+list:
+  - item1
+  - item2
+-> {"list": ["item1", "item2"]}
+```
+
 ### Reference
 [1]. <https://www.rushiagr.com/blog/2016/06/16/everything-you-need-to-know-about-tmux-copy-pasting-ubuntu/>
 
