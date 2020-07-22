@@ -86,6 +86,13 @@ tar -xvzf <file.tgz>
 dos2unix
 ```
 
+#### Prepend time stamp before each line of output on command line
+
+```bash
+# python version [5], other versiions are on available [5]
+command | python -c 'import sys,time;sys.stdout.write("".join(( " ".join((time.strftime("[%Y-%m-%d %H:%M:%S]", time.localtime()), line)) for line in sys.stdin )))'
+```
+
 ### Bash Scripting
 
 Run a series of commands while using control flows.
@@ -202,6 +209,11 @@ list:
   - item1
   - item2
 -> {"list": ["item1", "item2"]}
+# dictionary
+dict:
+  key1: val1
+  key2: val2
+-> {"dict":{"key1": "val1", "key2": "val2"}
 ```
 
 ### Reference
@@ -212,3 +224,5 @@ list:
 [3]. <https://amir.rachum.com/blog/2016/09/17/shared-libraries/>
 
 [4]. <https://www.howtogeek.com/248780/how-to-compress-and-extract-files-using-the-tar-command-on-linux/>
+
+[5]. <https://unix.stackexchange.com/questions/26728/prepending-a-timestamp-to-each-line-of-output-from-a-command>
