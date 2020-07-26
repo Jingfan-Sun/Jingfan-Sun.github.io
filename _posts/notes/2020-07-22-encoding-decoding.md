@@ -9,13 +9,22 @@ published: false
 
 ### Encoding Formats
 
-#### UTF-16
+#### UTF-8
 
 #### Base64
 
 ### Python Examples
 
 #### String
+
+```bash
+str = "hello"
+# convert to UTF-8
+# "hello" -> b'hello'
+utf8_str = str.encode("UTF-8") 
+# write binary string to file
+file.write(utf8_str)
+```
 
 #### Int
 
