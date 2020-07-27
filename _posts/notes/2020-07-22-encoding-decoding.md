@@ -28,4 +28,13 @@ file.write(utf8_str)
 
 #### Int
 
+```bash
+num = 17171
+# convert to binary
+# 17171 -> b'\x17C'
+num_bytes = num.to_bytes(2, byteorder="little")
+# convert back to number
+num_frombytes = int.from_bytes(num_bytes, byteorder="little")
+```
+
 #### Files
