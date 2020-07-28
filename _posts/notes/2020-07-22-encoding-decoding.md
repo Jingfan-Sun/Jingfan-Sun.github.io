@@ -32,6 +32,8 @@ file.write(utf8_str)
 num = 17171
 # convert to binary
 # 17171 -> b'\x17C'
+# b'\x17C' is 2 bytes, means b'\x17' + b'\x43'
+# b'\x17' is not printable, so it is displyed as it is, b'\x43' is prontable in ASCII, it is "C"
 num_bytes = num.to_bytes(2, byteorder="little")
 # convert back to number
 num_frombytes = int.from_bytes(num_bytes, byteorder="little")
