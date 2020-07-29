@@ -40,3 +40,13 @@ num_frombytes = int.from_bytes(num_bytes, byteorder="little")
 ```
 
 #### Files
+
+```bash
+# move to a specific position (pos) in file
+f.seek(pos)
+# move to a pos relative to a position in the file
+# start: 0 (default): file beginning, 1: current position, 2: file end
+f.seek(pos, start)
+# return the current position in the file
+f.tell()
+```
