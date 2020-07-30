@@ -30,6 +30,16 @@ published: false
     ```
 2. No large intermedia temporary files
 
+### Customized `sys.stdout`
+
+`sys.stdout` is a file, you can write a customized class to do something more
+
+1. use the normal `print()` function but write the printed staff to a file while printing on the screen
+2. process the printed staff whiling printing
+
+```python
+# override the stdout with 
+```
 
 ### Reference
 
