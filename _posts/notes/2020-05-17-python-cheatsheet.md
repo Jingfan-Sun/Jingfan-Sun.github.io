@@ -38,7 +38,8 @@ published: false
 2. process the printed staff whiling printing
 
 ```python
-# override the stdout with 
+# override the stdout with a customized class
+
 ```
 
 ### Reference
