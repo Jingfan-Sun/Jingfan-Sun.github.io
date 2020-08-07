@@ -64,11 +64,17 @@ export LD_LIBRARY_PATH=<path_to_search_for_library>
 #### Compress and Extract
 
 ```bash
+# tar familty **********
 # compress a dir to .tar.gz file [4]
 tar -czvf <archieve>.tar.gz <path-to-dir>
 # extract from .tgz file
 # -x: extract, -v: verbose, -z: gnnuzip, -f: last falg just before the file
 tar -xvzf <file.tgz>
+# zip familty **********
+# zip to path specified by -d 
+zip -d <path-to-.zip> <file(s)>
+# unzip to a path
+unzip <.zip-file> -d [<path-to-unzip>]
 ```
 
 #### redirect `stdout`, `stderr` or both to file
