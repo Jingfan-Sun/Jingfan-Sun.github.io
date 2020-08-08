@@ -28,7 +28,23 @@ published: false
     for item in gen_items():
         # do something
     ```
-2. No large intermedia temporary files
+2. No large intermedia temporary files/data
+
+#### Generator Expression
+
+```python
+# using generator expression, don't construct a list
+# compare to [expression for i in s if condition]
+# Only purpose is iteration, once comsumed, can't be reused
+for item in (expression for i in s if condition):
+    # do something
+    
+(expression for i in s if condition)
+# is equivalent to 
+for i in s:
+    if condition:
+        yield expression
+```
 
 ### Customized `sys.stdout`
 
