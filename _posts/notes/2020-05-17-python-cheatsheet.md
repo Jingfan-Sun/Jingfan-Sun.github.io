@@ -28,7 +28,7 @@ published: false
     for item in gen_items():
         # do something
     ```
-2. No large intermedia temporary files/data
+2. No large intermedia temporary files/data created, works well on large files.
 
 #### Generator Expression
 
@@ -38,7 +38,7 @@ published: false
 # Only purpose is iteration, once comsumed, can't be reused
 for item in (expression for i in s if condition):
     # do something
-    
+
 (expression for i in s if condition)
 # is equivalent to 
 for i in s:

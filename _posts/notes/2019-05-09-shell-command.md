@@ -99,6 +99,16 @@ dos2unix
 command | python -c 'import sys,time;sys.stdout.write("".join(( " ".join((time.strftime("[%Y-%m-%d %H:%M:%S]", time.localtime()), line)) for line in sys.stdin )))'
 ```
 
+#### search files
+
+```bash
+# search for file name recursively in a dir
+find <dir-path> -name "name-to-search"
+find ./ -name "foo*.txt"
+# search for file contents recursively in a dir
+grep -r "string-to-search" *
+```
+
 ### Bash Scripting
 
 Run a series of commands while using control flows.
