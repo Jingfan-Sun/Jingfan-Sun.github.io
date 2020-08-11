@@ -107,6 +107,8 @@ find <dir-path> -name "name-to-search"
 find ./ -name "foo*.txt"
 # search for file contents recursively in a dir
 grep -r "string-to-search" *
+# search for file contents recursively in a dir (only certain files)
+grep --include=\*.{cpp,h} -r <path-to-search> -e "pattern-to-search"
 ```
 
 ### Bash Scripting

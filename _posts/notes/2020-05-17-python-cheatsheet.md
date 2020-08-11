@@ -46,6 +46,31 @@ for i in s:
         yield expression
 ```
 
+### Decorator
+
+Decorator is a wrapper function used to extend or modify the called function.
+
+```python
+from datetime import datetime
+
+# the decorator (wrapper) function
+def printStartTime():
+    def printTime():
+        print("Start running at: ", datetime.now().strftime("%m-%d-%Y, %H:%M:%S"))
+        foo()
+    return printTime
+
+@printStartTime
+def foo():
+    # do something
+    print("work")
+
+# call foo()
+foo()
+# Start running at: 08-10-2020, 19:11:13
+# work
+```
+
 ### Customized `sys.stdout`
 
 `sys.stdout` is a file, you can write a customized class to do something more
@@ -61,3 +86,4 @@ for i in s:
 ### Reference
 
 [1]. <https://www.dabeaz.com/generators/Generators.pdf>
+[2]. <http://zetcode.com/python/python-decorators/>
