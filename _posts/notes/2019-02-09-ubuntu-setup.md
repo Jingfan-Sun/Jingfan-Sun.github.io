@@ -45,6 +45,11 @@ Follow <http://www.webupd8.org/2010/10/how-to-reboot-in-windows-from-ubuntu.html
 
 In ubuntu, use `sudo grub-reboot 4` to set the next default boot system in `Grub` to Windows. Then, use `reboot` to reboot the system. This default setting only works for next reboot. If you reboot from Windows again, the `Grub` default system will be `0`, i.e., ubuntu, again.
 
+To set the default grub boot system permanently, [ref](https://askubuntu.com/questions/52963/how-do-i-set-windows-to-boot-as-the-default-in-the-boot-loader)
+
+1. edit `/etc/default/grub`
+2. source the change by `sudo update-grub`
+
 #### Setup X11 through ssh
 
 Since X11 is not installed by default in current release of maxOS, we first install `XQuartz`, which is the official X11 on our mac. The steps are 
