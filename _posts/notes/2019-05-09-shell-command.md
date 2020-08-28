@@ -151,6 +151,7 @@ tmux new -s NAME # specify the NAME to start
 tmux ls # lists all curretn sessions
 tmux a # attach the last session
 tmux a -t NAME # attach the NAME session
+tmux a -t NAME -d # attach the NAME session, detach any other clients (to resize the window)
 <C-b> d # detach the current session
 <C-d> # close the Panel
 exit # close the Panel
