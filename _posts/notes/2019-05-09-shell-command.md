@@ -232,7 +232,23 @@ list:
 dict:
   key1: val1
   key2: val2
--> {"dict":{"key1": "val1", "key2": "val2"}
+-> {"dict":{"key1": "val1", "key2": "val2"}}
+# merge dictionary
+dict1: &dict1-link
+  key1: val1
+dict2:
+  <<: *dict1-link
+  key2: val2
+-> {"dict1":{"key1": "val1"}, "dict2":{"key1": "val1", "key2": "val2"}}
+# reuse list item
+level1-list-0:
+  - &list1
+    key1: val1
+level1-list-1:
+  - *list1
+  -
+    key2: val2
+-> {"level1-list-1":[{"key1": "val1"}, {"key2": "val2"}]}
 ```
 
 ### Reference
