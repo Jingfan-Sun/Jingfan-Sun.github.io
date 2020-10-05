@@ -140,6 +140,12 @@ command #2
 
 Choose the `LimitString` sufficiently unusual that it will not occur anywhere in the command line and confuse matters. [ref](https://tldp.org/LDP/abs/html/here-docs.html)
 
+#### Trace system calls and signals
+`strace` can be used to examine how the program you are using is trying to open and read files to do name resolution. Example, the following cmd will trace how `ssh` tries to open files to resolve the given hostname `<some-hostname>`. [ref](https://serverfault.com/questions/266897/why-is-hostname-lookup-in-ssh-returning-a-different-result)
+```bash
+$ strace -eopen,read -f -o /tmp/ssh-strace.txt ssh <some-hostname>
+```
+
 ### Terminal Tools
 
 #### Tmux
