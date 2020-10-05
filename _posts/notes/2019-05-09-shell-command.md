@@ -146,6 +146,11 @@ Choose the `LimitString` sufficiently unusual that it will not occur anywhere in
 $ strace -eopen,read -f -o /tmp/ssh-strace.txt ssh <some-hostname>
 ```
 
+#### `ssh` resolve hostname [ref](https://tldp.org/LDP/abs/html/here-docs.html)
+1. search in `~/.ssh/config`
+2. `/etc/resolv.conf` could have a `search` line which will automatically resolve hostnames
+3. `/etc/nsswitch.conf` can be used to change how the machine does name resolution so you should check that too
+
 ### Terminal Tools
 
 #### Tmux
