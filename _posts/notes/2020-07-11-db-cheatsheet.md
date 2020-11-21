@@ -25,4 +25,5 @@ GRANT ALL PRIVILEGES ON * . * TO 'username'@'local_ip';
 ```
 
 [1]. <https://phoenixnap.com/kb/mysql-remote-connection>
-[2]/ <https://www.digitalocean.com/community/tutorials/how-to-allow-remote-access-to-mysql>
+
+[2]. <https://www.digitalocean.com/community/tutorials/how-to-allow-remote-access-to-mysql>
