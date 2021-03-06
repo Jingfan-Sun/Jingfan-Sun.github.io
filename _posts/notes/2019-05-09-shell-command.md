@@ -9,7 +9,7 @@ published: true
 
 ### Commands
 
-#### switch to `root` user's shell
+#### Switch to `root` user's shell
 
 ```shell
 # after switching to root, the prompt will change to "#"
@@ -22,7 +22,7 @@ sudo su
 cd -
 ```
 
-#### write to a file with `sudo`
+#### Write to a file with `sudo`
 
 ```shell
 # assuming abc.txt requires root permission
@@ -30,7 +30,7 @@ sudo echo hello > abc.txt # not working
 echo hello | sudo tee abc.txt # works, `tee` takes stdin and write to files
 ```
 
-#### print commands to be executed (shell debug)
+#### Print commands to be executed (shell debug)
 
 ```bash
 # [2]
@@ -44,7 +44,7 @@ set +v
 set +x
 ```
 
-#### size the terminal window on remote machine
+#### Size the terminal window on remote machine
 
 ```bash
 # the prompt and commnads may not display correctly on remote machine you SSH to
@@ -52,7 +52,7 @@ set +x
 resize
 ```
 
-#### check the shared library dependecies of executable
+#### Check the shared library dependecies of executable
 
 ```bash
 # list the dependent shared libraries [3]
@@ -77,7 +77,7 @@ zip -d <path-to-.zip> <file(s)>
 unzip <.zip-file> -d [<path-to-unzip>]
 ```
 
-#### redirect `stdout`, `stderr` or both to file
+#### Redirect `stdout`, `stderr` or both to file
 
 ```bash
 # redirect stdout and stderr to seperate files
@@ -86,7 +86,7 @@ unzip <.zip-file> -d [<path-to-unzip>]
 <cmd> &> stdout_err.log
 ```
 
-#### convert windows `\r\n`  file to unix `\n` file
+#### Convert windows `\r\n`  file to unix `\n` file
 
 ```
 dos2unix
@@ -99,7 +99,7 @@ dos2unix
 command | python -c 'import sys,time;sys.stdout.write("".join(( " ".join((time.strftime("[%Y-%m-%d %H:%M:%S]", time.localtime()), line)) for line in sys.stdin )))'
 ```
 
-#### search files
+#### Search files
 
 ```bash
 # search for file name recursively in a dir
@@ -109,6 +109,16 @@ find ./ -name "foo*.txt"
 grep -r "string-to-search" *
 # search for file contents recursively in a dir (only certain files)
 grep --include=\*.{cpp,h} -r <path-to-search> -e "pattern-to-search"
+```
+
+#### Inline for loop
+
+```bash
+# traverse a range [6]
+for i in {0..99}; do cat min_${i}.txt | wc -l; done
+for ((i=0; i<100; i+=1)); do cat min_${i}.txt | wc -l; done
+# traverse on files
+for i in *.txt; do mv ${i}_backup.txt; done
 ```
 
 ### Bash Scripting
@@ -272,3 +282,5 @@ level1-list-1:
 [4]. <https://www.howtogeek.com/248780/how-to-compress-and-extract-files-using-the-tar-command-on-linux/>
 
 [5]. <https://unix.stackexchange.com/questions/26728/prepending-a-timestamp-to-each-line-of-output-from-a-command>
+
+[6]. <https://www.cyberciti.biz/faq/linux-unix-bash-for-loop-one-line-command/>
